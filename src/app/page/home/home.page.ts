@@ -18,7 +18,6 @@ export class HomePage {
   constructor() {
     this.loadFruits();
     this.loadVegetables();
-    this.addVegetable();
   }
  
   loadFruits() {
@@ -43,9 +42,9 @@ export class HomePage {
 
   }
 
-  addVegetable() {
-    this.vegetables.push(new Vegetable(this.newVegetable, 1));
-  }
+  // addVegetable() {
+  //   this.vegetables.push(new Vegetable(this.newVegetable, 1));
+  // }
   
   addItem(nameList, value) {
   nameList === 'vegetable'? 
