@@ -1,5 +1,7 @@
 {
   "name": "ionic-training",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

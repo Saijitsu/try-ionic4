@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-button slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-button>
+      <ion-title>
+        Application
+      </ion-title>
+    </ion-toolbar>
+   </ion-header>
+   <ion-content>
+  <div class="ion-padding">
+    <ion-text color="primary">
+      <h2>{{ name }}</h2>
+    </ion-text>
+    <ion-list class="ion-text-lg-center" lines="none">
+      <ion-item-group>
+        <ion-item-divider color="tertiary">
+          <ion-label>Fruits</ion-label>
+        </ion-item-divider>
+        <ion-item-sliding *ngFor="let fruit of fruits; index as i">
+          <ion-item>
+            <ion-label>{{ fruit.name }}</ion-label>
+            <ion-note>{{fruit.price | currency: 'EUR'}}</ion-note>
+            <ion-item-options>
+              <ion-button color="danger" (click)="removeItem(fruits, i)">Delete</ion-button>
+            </ion-item-options>
+          </ion-item>
+        </ion-item-sliding>
+      </ion-item-group>
+      <ion-item>
+          <ion-label position="floating">Add fruit</ion-label>
+          <ion-input name="fruits" [(ngModel)]="newFruit" required minlength="3" maxlength="15" autocorrect
+            spellcheck type="text" clearInput></ion-input>
+          <ion-button color="success" slot="end" (click)="addItem(fruits, newFruit)">Add Fruit!
+          </ion-button>
+        </ion-item>
+
+      <ion-item-group>
+        <ion-item-divider color="tertiary">
+          <ion-label>Vegetables</ion-label>
+        </ion-item-divider>
+        <ion-item-sliding *ngFor="let vegetable of vegetables; index as i">
+          <ion-item>
+            <ion-label>{{ vegetable.name }}</ion-label>
+            <ion-note>{{vegetable.price | currency: 'EUR'}}</ion-note>
+            <ion-item-options>
+              <ion-button color="danger" (click)="removeItem(vegetables, i)">Delete</ion-button>
+            </ion-item-options>
+          </ion-item>
+        </ion-item-sliding>
+      </ion-item-group>
+
+      <ion-item>
+        <ion-label position="floating">Add vegetable</ion-label>
+        <ion-input name="vegetables" [(ngModel)]="newVegetable" required minlength="3" maxlength="15" autocorrect
+          spellcheck type="text" clearInput></ion-input>
+        <ion-button color="success" slot="end" (click)="addItem(vegetables, newVegetable)">Add Vegetable!
+        </ion-button>
+      </ion-item>
+
+    </ion-list>
+  </div>
+</ion-content>
