@@ -17,7 +17,8 @@ export class SideMenuComponent implements OnInit {
     this.pages = [
       {name: 'home', title: 'Accueil'},
       {name: 'grid', title: 'Grille'},
-      {name: 'alert', title: 'Boite'}
+      {name: 'alert', title: 'Boite'},
+      {name: 'animals', title: 'Animaux'}
     ];
   }
 

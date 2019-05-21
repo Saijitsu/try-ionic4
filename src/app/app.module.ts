@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SideMenuComponent } from './component/side-menu/side-menu.component';
+import { AnimalsPage } from './page/animals/animals.page';
 
 @NgModule({
   declarations: [AppComponent, SideMenuComponent],

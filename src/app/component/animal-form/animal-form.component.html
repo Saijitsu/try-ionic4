@@ -1,0 +1,30 @@
+<form [fromGroup]="animalForm">
+  <ion-list>
+    <ion-item>
+      <ion-label>Nom:</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nom à l'écran:</ion-label>
+      <ion-input formControlName="printName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Klass:</ion-label>
+      <ion-select formControlName="class">
+        <ion-select-option *ngFor="let option of options"></ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
+</form>
