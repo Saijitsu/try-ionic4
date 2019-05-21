@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SideMenuComponent } from './component/side-menu/side-menu.component';
 import { AnimalsPage } from './page/animals/animals.page';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AnimalFormComponent } from './component/animal-form/animal-form.component';
 
 @NgModule({
-  declarations: [AppComponent, SideMenuComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent, SideMenuComponent, AnimalFormComponent],
+  entryComponents: [AnimalFormComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule],
   providers: [
     StatusBar,
     SplashScreen,

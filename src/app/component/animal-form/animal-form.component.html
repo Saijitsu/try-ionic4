@@ -1,4 +1,4 @@
-<form [fromGroup]="animalForm">
+<form [formGroup]="animalForm">
   <ion-list>
     <ion-item>
       <ion-label>Nom:</ion-label>
@@ -15,16 +15,18 @@
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-label></ion-label>
-      <ion-input formControlName="name" type="text"></ion-input>
+      <ion-label>Nom du petit:</ion-label>
+      <ion-input formControlName="childrenName"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label></ion-label>
-      <ion-input></ion-input>
+      <ion-label>Nom de la femelle:</ion-label>
+      <ion-input formControlName="femaleName"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label></ion-label>
-      <ion-input></ion-input>
+      <ion-label>Nom du cri:</ion-label>
+      <ion-input formControlName="soundName"></ion-input>
     </ion-item>
   </ion-list>
+  <ion-button color="light" (click)="cancel()">Annuler</ion-button>
+  <ion-button color="primary" (click)="addAnimal()">Valider</ion-button>
 </form>
