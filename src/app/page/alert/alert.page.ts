@@ -30,10 +30,17 @@ export class AlertPage implements OnInit {
       {
         text: 'Valid',
         cssClass: 'bg-primary',
-        handler: () => {
-          this.message = 'Stranger validation!';
+        handler: (data) => {
+          this.message = `This is my message: ${data.name}`;
         }
-      }]
+      }],
+      inputs:[
+        {
+          name:'name',
+          type:'text',
+          placeholder:'Add message!'
+        }
+      ]
     });
     await alert.present();
   }
