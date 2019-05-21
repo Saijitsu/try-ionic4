@@ -10,7 +10,7 @@ import { AlertPage } from './alert.page';
 const routes: Routes = [
   {
     path: '',
-    component: AlertPage
+    component: AlertPage      
   }
 ];
 

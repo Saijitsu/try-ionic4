@@ -8,12 +8,12 @@
       Animaux
     </ion-title>
   </ion-toolbar>
- </ion-header>
- 
- <ion-content>
+</ion-header>
+
+<ion-content>
   <ion-list lines="full">
     <ion-item>
-      <ion-fab-button size="small" slot="end">
+      <ion-fab-button (click)="openFormModal()" size="small" slot="end">
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-item>
@@ -21,4 +21,4 @@
       <ion-label>{{ item.title }}</ion-label> <ion-note> {{ item.class }}</ion-note>
     </ion-item>
   </ion-list>
- </ion-content>
+</ion-content>

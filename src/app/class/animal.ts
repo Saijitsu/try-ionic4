@@ -4,5 +4,7 @@ export class Animal {
     name: string;
     printName: string;
     class: AnimalClass;
+    childrenName?: string;
+    femaleName?: string;
+    soundName?: string;
 }
-
