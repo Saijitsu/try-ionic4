@@ -15,23 +15,23 @@ export class AlertPage implements OnInit {
 
   async presentAlert() {
     const alert = await this.alertcontroller.create({
-      header: 'avertissement',
-      subHeader: 'attention',
+      header: 'Add text message',
+      subHeader: 'Yes we can',
       cssClass: 'alert',
-      message: `Ce message s'affiche dans une boîte de dialogue`,
+      message: `This message is in a modal box`,
       buttons: [{
-        text: 'Annuler',
+        text: 'Cancel',
         role: 'cancel',
         cssClass: 'bg-secondary',
         handler: () => {
-          this.message = 'Annulation';
+          this.message = 'You cancel it!';
         }
       },
       {
-        text: 'Valider',
+        text: 'Valid',
         cssClass: 'bg-primary',
         handler: () => {
-          this.message = 'Validation obscure';
+          this.message = 'Stranger validation!';
         }
       }]
     });
