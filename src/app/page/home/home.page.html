@@ -1,14 +1,15 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-button slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-button>
-      <ion-title>
-        Application
-      </ion-title>
-    </ion-toolbar>
-   </ion-header>
-   <ion-content>
+  <ion-toolbar>
+    <!--slot emplacement du menu Start pour gauche (comme avec les flexbox)-->
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Presentation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
   <div class="ion-padding">
     <ion-text color="primary">
       <h2>{{ name }}</h2>
@@ -29,12 +30,12 @@
         </ion-item-sliding>
       </ion-item-group>
       <ion-item>
-          <ion-label position="floating">Add fruit</ion-label>
-          <ion-input name="fruits" [(ngModel)]="newFruit" required minlength="3" maxlength="15" autocorrect
-            spellcheck type="text" clearInput></ion-input>
-          <ion-button color="success" slot="end" (click)="addItem(fruits, newFruit)">Add Fruit!
-          </ion-button>
-        </ion-item>
+        <ion-label position="floating">Add fruit</ion-label>
+        <ion-input name="fruits" [(ngModel)]="newFruit" required minlength="3" maxlength="15" autocorrect spellcheck
+          type="text" clearInput></ion-input>
+        <ion-button color="success" slot="end" (click)="addItem(fruits, newFruit)">Add Fruit!
+        </ion-button>
+      </ion-item>
 
       <ion-item-group>
         <ion-item-divider color="tertiary">
