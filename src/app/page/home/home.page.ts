@@ -41,26 +41,15 @@ export class HomePage {
     console.log('vegetable: ', this.vegetables)
 
   }
-
-  // addVegetable() {
-  //   this.vegetables.push(new Vegetable(this.newVegetable, 1));
-  // }
   
   addItem(nameList, value) {
-  nameList === 'vegetable'? 
-  this.vegetables.push(new Vegetable(value, 1)) 
-  : this.fruits.push(new Fruit(value, 1))
+  nameList === 'vegetables'? 
+  nameList.push(new Vegetable(value, 1)) 
+  : nameList.push(new Fruit(value, 1))
   }
 
 
   removeItem(nameList, i){
     nameList.splice(i, 1)
   }
-  // deleteVegetable(i) { 
-  //   this.vegetables.splice(i, 1)
-  // }
-
-  // deleteFruit(i) { 
-  //   this.fruits.splice(i, 1)
-  // }
 }
