@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {MenuController, Platform} from '@ionic/angular';
-import {SplashScreen} from '@ionic-native/splash-screen/ngx';
-import {StatusBar} from '@ionic-native/status-bar/ngx';
+
 
 @Component({
   selector: 'app-side-menu',
@@ -17,7 +16,8 @@ export class SideMenuComponent implements OnInit {
   ) {
     this.pages = [
       {name: 'home', title: 'Accueil'},
-      {name: 'grid', title: 'Grille'}
+      {name: 'grid', title: 'Grille'},
+      {name: 'alert', title: 'Boite'}
     ];
   }
 
