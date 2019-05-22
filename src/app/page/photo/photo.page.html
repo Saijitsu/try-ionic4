@@ -1,12 +1,9 @@
 <ion-header>
     <ion-toolbar>
-      <!--slot emplacement du menu Start pour gauche (comme avec les flexbox)-->
-      <ion-buttons slot="start">
-        <ion-menu-button color="light"></ion-menu-button>
-      </ion-buttons>
-      <ion-title>
-        Presentation
-      </ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Photos</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -18,7 +15,7 @@
   </ion-item>
 
   <ion-card>
-    <ion-img [src]="myPhoto" alt="my photo"></ion-img>
+    <ion-img *ngIf="myPhoto" [src]="myPhoto" alt="my photo"></ion-img>
     <ion-label>Ecran plat à  {{ 200 | currency: 'EUR' }}</ion-label>
   </ion-card>
 

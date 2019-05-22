@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Native Storage</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-item>
+      <ion-input [(ngModel)]="firstName"></ion-input>
+      <ion-input (click)="login()">Save</ion-input>
+    </ion-item>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ nativeStorageService.savedName }}</ion-card-title>
+        <ion-button (click)="getFirstName()" color="secondary">GET</ion-button>
+      </ion-card-header>
+    </ion-card>
+  </ion-content>

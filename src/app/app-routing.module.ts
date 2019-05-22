@@ -9,6 +9,8 @@ const routes: Routes = [
   { path: 'animals', loadChildren: './page/animals/animals.module#AnimalsPageModule' },
   { path: 'details/:name', loadChildren: './page/details/details.module#DetailsPageModule' },
   { path: 'photo', loadChildren: './page/photo/photo.module#PhotoPageModule' },
+  { path: 'geolocation', loadChildren: './page/geolocation/geolocation.module#GeolocationPageModule' },
+  { path: 'native-storage', loadChildren: './page/native-storage/native-storage.module#NativeStoragePageModule' },
 ];
 
 @NgModule({

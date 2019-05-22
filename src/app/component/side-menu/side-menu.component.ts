@@ -18,7 +18,9 @@ export class SideMenuComponent implements OnInit {
       {name: 'home', title: 'Accueil'},
       {name: 'grid', title: 'Grille'},
       {name: 'alert', title: 'Boite'},
-      {name: 'animals', title: 'Animaux'}
+      {name: 'animals', title: 'Animaux'},
+      {name: 'photo', title: 'Photos'},
+      {name: 'geolocation', title: 'Geolocation'},
     ];
   }
 

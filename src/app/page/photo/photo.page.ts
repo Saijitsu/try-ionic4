@@ -18,7 +18,8 @@ export class PhotoPage implements OnInit {
 
   takePhoto(){
     this.cameraService.takePhoto().then((photo) => {
-      this.myPhoto = photo
+      this.myPhoto = photo= 'data:image/jpeg;base64,' + photo;
+     // this.ngOnInit()
     });
   }
 

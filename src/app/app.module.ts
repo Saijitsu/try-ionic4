@@ -12,6 +12,9 @@ import {SideMenuComponent} from './component/side-menu/side-menu.component';
 import {AnimalFormComponent} from './component/animal-form/animal-form.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { Camera } from '@ionic-native/camera/ngx'
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NativeStorageService } from './service/native-storage.service';
+
 @NgModule({
   declarations: [AppComponent, SideMenuComponent, AnimalFormComponent],
   entryComponents: [AnimalFormComponent],
@@ -20,6 +23,8 @@ import { Camera } from '@ionic-native/camera/ngx'
     AppRoutingModule,
     ReactiveFormsModule],
   providers: [
+    NativeStorageService,
+    Geolocation,
     Camera,
     StatusBar,
     SplashScreen,
