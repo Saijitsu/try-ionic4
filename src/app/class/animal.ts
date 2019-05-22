@@ -1,4 +1,4 @@
-import { AnimalClass } from '../enum/animal-class.enum';
+import {AnimalClass} from '../enum/animal-class.enum';
 
 export class Animal {
     name: string;
